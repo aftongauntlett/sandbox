@@ -41,6 +41,8 @@
     <v-main id="main">
       <router-view/>
     </v-main>
+    <skip-links/>
+
   </v-app>
 </template>
 
