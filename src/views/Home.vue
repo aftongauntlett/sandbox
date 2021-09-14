@@ -1,15 +1,16 @@
 <template>
-  <hello-world />
+<div>
+  <timeline />
+</div>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
-
+import timeline from "@/components/timeline"
   export default {
     name: 'Home',
 
     components: {
-      HelloWorld,
+      timeline
     },
   }
 </script>
