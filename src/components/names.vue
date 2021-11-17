@@ -1,6 +1,8 @@
 <template>
   <v-row>
-    <v-col></v-col>
+    <v-col>
+        {{ imageURL }}
+    </v-col>
     <v-col>
       <v-timeline>
         <v-timeline-item
@@ -10,26 +12,32 @@
           v-for="(employees, job) in people"
           :key="job"
         >
-          <employees-group :job="job" :employees="employees" />
+          <employees-group :job="job" :employees="employees" @clicked="bio=$event.bio; imageURL=$event.imageURL" />
         </v-timeline-item>
       </v-timeline>
     </v-col>
-    <v-col></v-col>
+    <v-col>
+        <div>
+            {{ bio }}
+        </div>
+    </v-col>
   </v-row>
 </template>
 
 <script>
 import EmployeesGroup from "./employeesGroup.vue";
-import profile from "./profile.vue";
 
 export default {
-  components: { profile, EmployeesGroup },
+  components: { EmployeesGroup },
   data: () => ({
+    bio: "",
+    imageURL: "",
     people: {
       manager: [
         {
           name: "bob",
           bio: "bio info",
+          img: "randjomhge"
         },
       ],
       lead: [
