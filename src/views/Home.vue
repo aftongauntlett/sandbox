@@ -10,7 +10,7 @@ import timeline from "@/components/timeline"
     name: 'Home',
 
     components: {
-      timeline
+      // timeline
     },
   }
 </script>
