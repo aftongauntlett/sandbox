@@ -1,11 +1,11 @@
 <template>
 <div>
-  <timeline />
+  <!-- <timeline /> -->
 </div>
 </template>
 
 <script>
-import timeline from "@/components/timeline"
+// import timeline from "@/components/timeline"
   export default {
     name: 'Home',
 

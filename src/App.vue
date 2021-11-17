@@ -1,7 +1,9 @@
 <template>
   <v-app>
     <skip-links/>
-    <profile/>
+    <v-container>
+      <names/>
+    </v-container>
   
     <v-main id="main">
       <router-view/>
@@ -13,10 +15,10 @@
 
 <script>
 import skipLinks from './components/skipLinks.vue';
-import profile from './components/profile.vue';
+import names from './components/names.vue';
 
 export default {
-  components: { skipLinks, profile },
+  components: { skipLinks, names },
   name: 'App',
 
   data: () => ({
